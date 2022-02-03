@@ -1,0 +1,25 @@
+.div {
+    height: 550px;
+    overflow: hidden;
+
+}
+
+.div > div > div > div{
+        
+    transition: box-shadow .20s ease-in-out;
+    transition: transform .40s ease-in-out;
+}
+
+
+.div > div > div > div:hover{
+    transform: scale(1.008); 
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.10)!important;
+}
+
+.div > div{
+    margin-top: -380px;
+}
+
+.div > *{
+    transform:  rotate(-10deg);
+}

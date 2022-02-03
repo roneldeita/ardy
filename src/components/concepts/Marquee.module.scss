@@ -1,0 +1,55 @@
+.div{
+    height: 80px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.div .left,
+.div .right{
+    display: block;
+    width: 200%;
+    height: 200px;
+    position: absolute;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+
+.div .left{
+    background-color: black;
+    color: white;
+    animation: marqueeLeft 15s linear infinite;
+}
+
+.div .right{
+    color: black;
+    animation: marqueeRight 15s linear infinite;
+}
+
+.left p,
+.right p{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 70px;
+    line-height: 70px;
+    width: 50%;
+}
+
+.left p{
+    float: left;
+}
+.right p{
+    float: right;
+}
+
+
+@keyframes marqueeLeft {
+    0% { left: 0; }
+    100% { left: -100%; }
+  }
+
+  @keyframes marqueeRight {
+    0% { right: 0; }
+    100% { right: -100%; }
+  }
+
+
