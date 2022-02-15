@@ -1,6 +1,9 @@
 import * as React from 'react'
 import { Link, useStaticQuery, graphql } from 'gatsby'
 import { Helmet } from "react-helmet"
+import { navbarBrand } from './layout.module.scss'
+import '../scss/custom.scss';
+
 
 const Layout = ({ pageTitle, children }) => {
 
@@ -23,26 +26,45 @@ const Layout = ({ pageTitle, children }) => {
         <title>{pageTitle} | {data.site.siteMetadata.title}</title>
         <link rel="canonical" href="http://mysite.com/example" />
       </Helmet>
-      <nav className="navbar sticky-top navbar-expand-lg navbar-light bg-light">
-        <div className="container">
-          <Link to="/" className="navbar-brand">Ardy</Link>
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      {/* Navbar */}
+      <nav className="navbar sticky-top navbar-light bg-light">
+        <div className="container justify-content-start">
+          <button 
+            className="navbar-toggler" type="button" 
+            data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" 
+            aria-controls="offcanvasNavbar">
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div className="navbar-nav">
-              <Link to="/about" className="nav-link">About</Link>
-              <Link to="/blog" className="nav-link">Blog</Link>
+          <Link to="/" className={`${navbarBrand} navbar-brand fw-lighter fs-4`}>ARDY</Link>
+          <div className="offcanvas offcanvas-start" data-bs-scroll="true" tabIndex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div className="offcanvas-header">
+              <p className="offcanvas-title fw-lighter fs-1" id="offcanvasNavbarLabel">ARDY</p>
+              <button type="button" className="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div className="offcanvas-body">
+              <ul className="navbar-nav flex-grow-1 pe-3 fs-2">
+                <li className="nav-item">
+                  <Link to="/" className="nav-link">Design concepts</Link>
+                </li>
+                <li className="nav-item">
+                  <Link to="/" className="nav-link">Aon Brand</Link>
+                </li>
+                <li className="nav-item">
+                  <Link to="/blog" className="nav-link">Blog</Link>
+                </li>
+                <li className="nav-item">
+                  <Link to="/about" className="nav-link">About</Link>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </nav>
-      <div className="container">
-        <main>
-          <br/>
-          {children}
-        </main>
-      </div>
+      {/* end of Navbar */}
+      <main>
+        <br/>
+        {children}
+      </main>
     </div>
   )
 }

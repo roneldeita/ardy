@@ -12,7 +12,12 @@ module.exports = {
         spaceId: "ck2o727nqlbe",
       },
     },
-    "gatsby-plugin-sass",
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        implementation: require("sass"),
+      },
+    },
     "gatsby-plugin-image",
     {
       resolve: "gatsby-plugin-google-analytics",

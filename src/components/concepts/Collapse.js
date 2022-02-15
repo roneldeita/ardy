@@ -1,19 +1,21 @@
 import * as React from "react"
-//import { div, p } from './BigTextConcept.module.scss'
+import 'bootstrap-icons/font/bootstrap-icons.css'
+import { ConceptTitle } from './Collapse.module.scss'
  
 
 const Collapse = ({id, title, desc}) => {
     return (
-        <div className="font-monospace fw-lighter">
+        <div className="container full-width fw-lighter fs-5">
             <p>
             <button 
-                className="btn btn-outline-info btn-sm" 
+                className="btn btn-lighter btn-sm" 
                 type="button" 
                 data-bs-toggle="collapse" 
                 data-bs-target={`#${id}`} 
                 aria-expanded="false" 
                 aria-controls="collapseExample">
-                {title}
+                <i className="bi bi-info-circle fs-5"></i>
+                <span className={`${ConceptTitle} fw-lighter fs-5`}><u>{title}</u></span>
             </button>
             </p>
             <div className="collapse" id={id}>

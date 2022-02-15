@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 const BlogPage = ({ data }) => {
   return (
     <Layout pageTitle="My Blog Posts">
+      <div className="container">
       <ul>
       {
         data.allFile.nodes.map(node => (
@@ -14,6 +15,7 @@ const BlogPage = ({ data }) => {
         ))
       }
       </ul>
+      </div>
     </Layout>
   )
 }

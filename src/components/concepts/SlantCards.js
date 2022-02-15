@@ -5,7 +5,7 @@ import { StaticImage } from "gatsby-plugin-image"
 
 const SlantCards = ({text}) => {
     return (
-        <div className={`${div} container-fluid`}>
+        <div className={`${div} container`}>
             <div className="row row-cols-md-4 g-4 d-none d-sm-none d-md-flex">
                 <div className="col"> 
                     <div className="card h-100 shadow-sm fw-light" style={{top:`20%`}}>
