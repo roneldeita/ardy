@@ -8,11 +8,16 @@ import SlantCards from "../components/concepts/SlantCards"
 const IndexPage = () => {
   return (
     <Layout pageTitle="Home page">
+      {/* <Collapse 
+        id="b"
+        title="Concept: Burning"
+        desc="I saw this cool concept somewhere, so I searched the internet because I am curious how they do it without using any images, https://www.youtube.com/watch?v=G4CRBvx-pac"/><br/>
+      <TextWaterWave text="WAVE"/><br/> */}
       <Collapse 
         id="tfww"
         title="Concept: Text water wave"
-        desc="I saw this cool concept somewhere, so searched the internet because I am curious how they do without using any images, https://www.youtube.com/watch?v=G4CRBvx-pac"/><br/>
-      <TextWaterWave text="ARDY"/><br/>
+        desc="I saw this cool concept somewhere, so I searched the internet because I am curious how they do it without using any images, https://www.youtube.com/watch?v=G4CRBvx-pac"/><br/>
+      <TextWaterWave text="WAVE"/><br/>
       <Collapse 
         id="sc"
         title="Concept: Tilt cards/tiles"

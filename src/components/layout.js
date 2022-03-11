@@ -27,7 +27,7 @@ const Layout = ({ pageTitle, children }) => {
         <link rel="canonical" href="http://mysite.com/example" />
       </Helmet>
       {/* Navbar */}
-      <nav className="navbar sticky-top navbar-light bg-light">
+      <nav className="navbar sticky-top navbar-light">
         <div className="container justify-content-start">
           <button 
             className="navbar-toggler" type="button" 
@@ -46,9 +46,9 @@ const Layout = ({ pageTitle, children }) => {
                 <li className="nav-item">
                   <Link to="/" className="nav-link">Design concepts</Link>
                 </li>
-                <li className="nav-item">
+                {/* <li className="nav-item">
                   <Link to="/" className="nav-link">Aon Brand</Link>
-                </li>
+                </li> */}
                 <li className="nav-item">
                   <Link to="/blog" className="nav-link">Blog</Link>
                 </li>
