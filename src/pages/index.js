@@ -6,6 +6,7 @@ import TextWaterWave from "../components/concepts/TextWaterWave"
 import SlantCards from "../components/concepts/SlantCards"
 
 const IndexPage = () => {
+
   return (
     <Layout pageTitle="Home page">
       {/* <Collapse 
