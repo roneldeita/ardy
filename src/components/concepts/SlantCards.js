@@ -85,7 +85,7 @@ const SlantCards = ({text}) => {
 
     const Shuffle = ( () => {
         let newArr = [...arr]
-        const shuffle = newArr.sort(() => Math.random() - newArr.length )
+        const shuffle = newArr.sort(() => Math.random() - 0.5 )
         setArr(shuffle)
 
     })
